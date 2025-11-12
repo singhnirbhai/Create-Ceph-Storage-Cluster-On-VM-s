@@ -53,7 +53,7 @@ ssh-copy-id root@ceph-node1
 ```
 ## 🚀 Ceph Bootstrap (on ceph-admin)
 ```bash
-cephadm bootstrap --mon-ip 192.168.56.10 --single-host-defaults
+cephadm bootstrap --mon-ip <vm machine ip> --single-host-defaults
 ```
 ## Gomto ceph shell
 ```bash
