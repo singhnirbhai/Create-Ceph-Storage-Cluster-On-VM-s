@@ -30,6 +30,13 @@ EOF
 sudo rpm --import https://download.ceph.com/keys/release.asc
 ```
 ```bash
+sudo dnf install -y https://download.ceph.com/rpm-reef/el9/noarch/ceph-release-1-1.el9.noarch.rpm
+```
+```bash
+sudo dnf clean all
+sudo dnf makecache
+```
+```bash
 sudo dnf install -y cephadm
 ```
 ```bash
