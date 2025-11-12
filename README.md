@@ -55,7 +55,15 @@ ssh-copy-id root@ceph-node1
 ```bash
 cephadm bootstrap --mon-ip <vm machine ip> --single-host-defaults
 ```
-## Gomto ceph shell
+#  Generate a Ceph SSH key (if not already)
+```bash
+cephadm shell -- ceph cephadm get-pub-key > /tmp/ceph.pub
+```
+#  Copy this key to your target node (replace IP as needed)
+```bash
+ssh-copy-id -f -i /tmp/ceph.pub root@<nceph-node1-ip>
+```
+## Go to ceph shell
 ```bash
 cephadm shell
 ```
